@@ -173,16 +173,3 @@ php artisan test --filter=StoreTest
 2. **Mata Uang:** Transaksi saat ini dibatasi hanya dalam format mata uang tunggal (Rupiah / IDR).
 3. **Pembatalan Transaksi Khusus:** Pembatalan transaksi kompleks atau pengembalian barang (*retur*) belum terhubung ke sistem jurnal akuntansi eksternal.
 
----
-
-## ✅ Definition of Done Checklist
-
-- [x] Aplikasi dapat dijalankan di *environment* bersih hanya dengan mengikuti petunjuk README ini.
-- [x] Fungsi Login dan *Role-Based Access Control* (Admin vs Staff) berjalan konsisten.
-- [x] Seluruh *Master Data* (Kategori, Produk, Supplier) dapat dikelola dengan validasi server-side.
-- [x] Modul Pembelian (*Purchase*) otomatis menambah stok barang secara akurat.
-- [x] Modul Penjualan (*Sales*) otomatis mengurangi stok barang secara akurat dan menolak *overselling*.
-- [x] Transaksi menggunakan `DB::transaction()` untuk menjamin *Atomicity* dan *Data Consistency*.
-- [x] Laporan Penjualan dilengkapi *Search*, *Date Filter*, dan *Pagination*.
-- [x] Seluruh *Test Scenario Minimum* lulus uji saat dijalankan via `php artisan test`.
-- [x] Tidak ada kredensial atau *API Keys* sensitif yang di-commit ke repositori Git.
